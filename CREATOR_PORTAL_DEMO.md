@@ -21,6 +21,8 @@ an API key, an account identifier, a wallet, or a credit balance.
 
 Target duration: 3:30 to 4:30.
 
+Submission status: package `0.1.3` entered n8n manual review on 2026-08-30.
+
 1. Open **Settings -> Community nodes -> Install**.
 2. Install the exact public package
    `@aipowergrid/n8n-nodes-aipg@0.1.3`. Show the installed package name,
@@ -33,12 +35,16 @@ Target duration: 3:30 to 4:30.
 5. Import `examples/creator-portal-review.json` and attach the AI Power Grid
    credential to both AI Power Grid nodes.
 6. Run **Generate text with AIPG**. Show the successful completed response and
-   the bounded settings (`auto`, 64 output tokens).
+   the bounded settings (`auto`, 256 output tokens). The larger bound leaves
+   room for reasoning-capable workers to reach a visible final answer while
+   remaining comfortably inside the demo spend ceiling.
 7. Add an **OpenAI API** credential for **AIPG-compatible chat model** using
    the same disposable key and `https://api.aipowergrid.io/v1` as its base
-   URL. Keep the key masked. Attach it to the chat-model node.
+   URL. Keep the key masked. Attach it to the chat-model node, which is pinned
+   to the production-proven `qwen38-flash-next-125b-nvfp4` route because it
+   emits the structured OpenAI tool call required by n8n's Tools Agent.
 8. Open the test chat and ask: `Use your tool to explain AI Power Grid in one
-sentence.` Show the AI-agent execution calling **AI Power Grid tool** and
+   sentence.` Show the AI-agent execution calling **AI Power Grid tool** and
    returning the tool result.
 9. End on the successful workflow execution and installed package version.
 

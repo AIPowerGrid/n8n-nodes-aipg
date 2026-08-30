@@ -17,7 +17,7 @@
 				"textModel": "auto",
 				"textPrompt": "In one sentence, explain why an OpenAI-compatible API is useful in an n8n workflow.",
 				"systemPrompt": "Be concise and factual.",
-				"maxTokens": 64,
+				"maxTokens": 256,
 				"temperature": 0.2
 			},
 			"id": "b26fd86c-6e98-43d4-b2af-8814f00e58b7",
@@ -53,11 +53,11 @@
 				"model": {
 					"__rl": true,
 					"mode": "id",
-					"value": "auto"
+					"value": "qwen38-flash-next-125b-nvfp4"
 				},
 				"responsesApiEnabled": false,
 				"options": {
-					"maxTokens": 96,
+					"maxTokens": 256,
 					"temperature": 0
 				}
 			},
@@ -69,16 +69,18 @@
 		},
 		{
 			"parameters": {
+				"descriptionType": "manual",
+				"toolDescription": "Generate a concise text answer using the decentralized AI Power Grid. Use this tool whenever the user requests an AI Power Grid result.",
 				"operation": "text",
 				"textModel": "auto",
 				"textPrompt": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('textPrompt', 'The exact short prompt to send to AI Power Grid.', 'string') }}",
 				"systemPrompt": "Return a concise, factual answer for the calling agent.",
-				"maxTokens": 64,
+				"maxTokens": 256,
 				"temperature": 0.2
 			},
 			"id": "f2571092-9bcb-43e5-908a-329474d0ffde",
 			"name": "AI Power Grid tool",
-			"type": "@aipowergrid/n8n-nodes-aipg.aiPowerGrid",
+			"type": "@aipowergrid/n8n-nodes-aipg.aiPowerGridTool",
 			"typeVersion": 1,
 			"position": [-60, 460]
 		}

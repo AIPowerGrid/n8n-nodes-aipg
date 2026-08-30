@@ -29,6 +29,20 @@ test('publishes from the dedicated repository with root credential source', asyn
 	assert.ok(packageJson.n8n.credentials.includes('dist/credentials/AipgApi.credentials.js'));
 });
 
+test('creator review workflow uses n8n tool wrapper for the agent connection', async () => {
+	const workflow = JSON.parse(
+		await readFile(new URL('../examples/creator-portal-review.json', import.meta.url), 'utf8'),
+	);
+	const tool = workflow.nodes.find((node) => node.name === 'AI Power Grid tool');
+
+	assert.equal(tool.type, '@aipowergrid/n8n-nodes-aipg.aiPowerGridTool');
+	assert.match(tool.parameters.textPrompt, /\$fromAI\('textPrompt'/);
+	assert.equal(
+		workflow.connections['AI Power Grid tool'].ai_tool[0][0].node,
+		'AIPG tool agent',
+	);
+});
+
 test('uses the fixed HTTPS production API', () => {
 	assert.equal(AIPG_API_BASE, 'https://api.aipowergrid.io/v1');
 	assert.deepEqual(Object.keys(OPERATION_CONTRACTS).sort(), ['audio', 'image', 'text', 'video']);
