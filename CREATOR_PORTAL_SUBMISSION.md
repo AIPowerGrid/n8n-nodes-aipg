@@ -65,6 +65,12 @@ Creator Portal acceptance, permission to publish as verified, or n8n
 endorsement. Do not claim acceptance until the portal reports **Approved For
 Publish**.
 
+The credential-free reviewer workflow is
+[`examples/creator-portal-review.json`](examples/creator-portal-review.json),
+and the exact recording sequence and secret-handling rules are in
+[`CREATOR_PORTAL_DEMO.md`](CREATOR_PORTAL_DEMO.md). A disposable local n8n
+`2.36.8` instance has installed the exact public `0.1.3` package successfully.
+
 ### Reverification on 2026-08-30
 
 - `npx @n8n/scan-community-package @aipowergrid/n8n-nodes-aipg` passed
