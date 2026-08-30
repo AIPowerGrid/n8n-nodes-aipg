@@ -3,8 +3,7 @@
 ## Package
 
 - npm name: `@aipowergrid/n8n-nodes-aipg`
-- current npm version: `0.1.2`
-- pending corrected version: `0.1.3`
+- current npm version: `0.1.3`
 - canonical source: `AIPowerGrid/n8n-nodes-aipg`
 - license: MIT
 - operations: completed text, image, video, and audio generation
@@ -13,17 +12,18 @@
 
 ## Publication path
 
-`@aipowergrid/n8n-nodes-aipg@0.1.2` was published from the former monorepo.
-Version `0.1.3` must be published from this dedicated repository with tag
-`n8n-nodes-aipg-v0.1.3`. Before creating that tag, set its npm Trusted
-Publisher to:
+`@aipowergrid/n8n-nodes-aipg@0.1.3` was published from this dedicated
+repository with npm provenance using tag `n8n-nodes-aipg-v0.1.3`. Its Trusted
+Publisher is:
 
 - repository owner: `AIPowerGrid`
 - repository: `n8n-nodes-aipg`
 - workflow: `publish.yml`
 
-Do not publish until those values are verified in npm. A clean n8n `2.36.8`
-instance already discovered and loaded all four operations from `0.1.2`.
+The public package resolves to commit `c90d980`, and n8n's official
+`@n8n/scan-community-package` scanner passes provenance, source retrieval, and
+package security checks for `0.1.3`. A clean n8n `2.36.8` instance already
+discovered and loaded all four operations from the package.
 
 ## Creator Portal evidence
 
@@ -56,7 +56,7 @@ commit, while the published package contains
 `repository.directory: n8n-nodes-aipg` monorepo field, but the portal did not
 resolve it. Version `0.1.3` therefore points npm directly at this dedicated
 repository, where `credentials/AipgApi.credentials.ts` is at the root. Do not
-claim acceptance until that release exists and the automated review passes.
+claim acceptance until the new automated review passes.
 Submission and automated review are not Creator Portal acceptance, manual
 approval, or n8n endorsement.
 
@@ -64,8 +64,8 @@ approval, or n8n endorsement.
 
 - `npx @n8n/scan-community-package @aipowergrid/n8n-nodes-aipg` passed
   provenance, source retrieval, and package security checks for public version
-  `0.1.2`.
-- The scanner resolved the attested source to repository commit `447a56b`.
+  `0.1.3`.
+- The scanner resolved the attested source to repository commit `c90d980`.
 - `npm run lint`, `npm test`, and `npm pack --dry-run` passed after updating
   the development-only `@n8n/node-cli` toolchain to `0.46.0` on `main`.
 - `npm audit --omit=dev` reports zero production dependency advisories. The
