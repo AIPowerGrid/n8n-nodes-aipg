@@ -34,5 +34,8 @@ keeps Grid credentials in n8n's encrypted credential store.
 - `npm pack --dry-run`
 - `AIPG_LIVE_E2E=1 npm run test:e2e:live` (explicitly authorized disposable
   key and credit spend only)
-- Publish only through `.github/workflows/publish-n8n.yml` using a matching
+- This dedicated repository is the canonical source for the npm package. Do
+  not make package changes in the former `grid-provider-integrations`
+  subdirectory.
+- Publish only through `.github/workflows/publish.yml` using a matching
   `n8n-nodes-aipg-vX.Y.Z` tag. Do not bypass provenance with local publishing.

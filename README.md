@@ -106,9 +106,11 @@ output, or account balance.
 
 ## Release
 
-`@aipowergrid/n8n-nodes-aipg@0.1.2` is public with npm provenance from tag
-`n8n-nodes-aipg-v0.1.2`. Future releases publish only through the root
-`publish-n8n.yml` workflow and its npm OIDC Trusted Publisher. The workflow
-rejects a tag that does not exactly match `package.json`, reruns tests and lint,
-and invokes n8n's supported release command. The one-time bootstrap token is
-revoked; do not restore a registry token.
+`@aipowergrid/n8n-nodes-aipg@0.1.2` is the current public package. Version
+`0.1.3` moves its npm provenance to this dedicated repository so n8n's Creator
+Portal can resolve credential source files at the repository root. Release it
+only through `.github/workflows/publish.yml` and the npm OIDC Trusted Publisher
+for this repository. The workflow rejects a tag that does not exactly match
+`package.json`, requires the release commit to be on `main`, and reruns the
+package checks before publishing. The one-time bootstrap token is revoked; do
+not restore a registry token.

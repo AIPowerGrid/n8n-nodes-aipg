@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { access, readFile } from 'node:fs/promises';
 import test from 'node:test';
 
 import {
@@ -16,6 +17,17 @@ import {
 	getTextModels,
 	getVideoModels,
 } from '../dist/nodes/AiPowerGrid/loadOptions.js';
+
+test('publishes from the dedicated repository with root credential source', async () => {
+	const packageJson = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
+	assert.equal(
+		packageJson.repository.url,
+		'git+https://github.com/AIPowerGrid/n8n-nodes-aipg.git',
+	);
+	assert.equal(packageJson.repository.directory, undefined);
+	await access(new URL('../credentials/AipgApi.credentials.ts', import.meta.url));
+	assert.ok(packageJson.n8n.credentials.includes('dist/credentials/AipgApi.credentials.js'));
+});
 
 test('uses the fixed HTTPS production API', () => {
 	assert.equal(AIPG_API_BASE, 'https://api.aipowergrid.io/v1');

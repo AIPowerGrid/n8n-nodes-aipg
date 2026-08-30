@@ -3,9 +3,9 @@
 ## Package
 
 - npm name: `@aipowergrid/n8n-nodes-aipg`
-- version: `0.1.2`
-- source: `AIPowerGrid/grid-provider-integrations`, directory
-  `n8n-nodes-aipg`
+- current npm version: `0.1.2`
+- pending corrected version: `0.1.3`
+- canonical source: `AIPowerGrid/n8n-nodes-aipg`
 - license: MIT
 - operations: completed text, image, video, and audio generation
 - credential: encrypted bearer key with `account.read` and
@@ -13,15 +13,17 @@
 
 ## Publication path
 
-`@aipowergrid/n8n-nodes-aipg@0.1.2` was published from GitHub Actions with
-provenance on npm using tag `n8n-nodes-aipg-v0.1.2`. Its Trusted Publisher is:
+`@aipowergrid/n8n-nodes-aipg@0.1.2` was published from the former monorepo.
+Version `0.1.3` must be published from this dedicated repository with tag
+`n8n-nodes-aipg-v0.1.3`. Before creating that tag, set its npm Trusted
+Publisher to:
 
 - repository owner: `AIPowerGrid`
-- repository: `grid-provider-integrations`
-- workflow: `publish-n8n.yml`
+- repository: `n8n-nodes-aipg`
+- workflow: `publish.yml`
 
-The public package resolves to the tagged commit, and a clean n8n `2.36.8`
-instance discovered and loaded all four operations.
+Do not publish until those values are verified in npm. A clean n8n `2.36.8`
+instance already discovered and loaded all four operations from `0.1.2`.
 
 ## Creator Portal evidence
 
@@ -43,18 +45,20 @@ instance discovered and loaded all four operations.
 - Documentation states that plaintext requests may be inspected by remote
   community workers and makes no n8n partnership claim.
 
-The package and provenance are public. It was submitted to the Creator Portal
-on 2026-08-30. The package's portal page is
+The package and provenance are public. It was submitted, then resubmitted, to
+the Creator Portal on 2026-08-30. The package's portal page is
 [`/nodes/@aipowergrid%2Fn8n-nodes-aipg/integration`](https://creators.n8n.io/nodes/@aipowergrid%2Fn8n-nodes-aipg/integration).
 The automated review later reported **Changes Required** with one finding:
 `Can't find credential file in repo`. The credential source exists at
 `n8n-nodes-aipg/credentials/AipgApi.credentials.ts` in npm's attested source
 commit, while the published package contains
 `dist/credentials/AipgApi.credentials.js`. The npm metadata uses the standard
-`repository.directory: n8n-nodes-aipg` monorepo field. Do not resubmit or claim
-acceptance until the repository-location issue is corrected in a new package
-release and the automated review passes. Submission and automated review are
-not Creator Portal acceptance, manual approval, or n8n endorsement.
+`repository.directory: n8n-nodes-aipg` monorepo field, but the portal did not
+resolve it. Version `0.1.3` therefore points npm directly at this dedicated
+repository, where `credentials/AipgApi.credentials.ts` is at the root. Do not
+claim acceptance until that release exists and the automated review passes.
+Submission and automated review are not Creator Portal acceptance, manual
+approval, or n8n endorsement.
 
 ### Reverification on 2026-08-30
 
@@ -76,10 +80,10 @@ Portal's current field names and package status remain authoritative.
 - **Display name:** `AI Power Grid`
 - **Short description:** `Generate text, images, video, and audio with community-powered models through the AI Power Grid API.`
 - **Category:** `AI`
-- **Source repository:** `https://github.com/AIPowerGrid/grid-provider-integrations/tree/main/n8n-nodes-aipg`
-- **Documentation:** `https://github.com/AIPowerGrid/grid-provider-integrations/tree/main/n8n-nodes-aipg#readme`
+- **Source repository:** `https://github.com/AIPowerGrid/n8n-nodes-aipg`
+- **Documentation:** `https://github.com/AIPowerGrid/n8n-nodes-aipg#readme`
 - **API key console:** `https://console.aipowergrid.io/dashboard/api-key`
-- **Support:** `https://github.com/AIPowerGrid/grid-provider-integrations/issues`
+- **Support:** `https://github.com/AIPowerGrid/n8n-nodes-aipg/issues`
 - **License:** `MIT`
 
 Long description:
