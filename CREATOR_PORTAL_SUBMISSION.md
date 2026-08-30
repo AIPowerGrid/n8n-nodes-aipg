@@ -57,10 +57,12 @@ commit, while the published package contains
 resolve it. Version `0.1.3` therefore points npm directly at this dedicated
 repository, where `credentials/AipgApi.credentials.ts` is at the root.
 
-The resubmitted `0.1.3` package has now passed the Creator Portal's automated
-review. The portal currently reports **Manual Review: Awaiting Video** and asks
-for one uncut demonstration of npm installation, credential validation, a
-common operation, and one AI-agent tool action. This is not manual approval,
+The resubmitted `0.1.3` package passed the Creator Portal's automated review.
+The required uncut demonstration was uploaded on 2026-08-30 and showed the
+exact npm package, masked credential validation, direct text generation, and an
+AI-agent tool call. The disposable scoped Grid key was revoked after the
+recording, and the fixed revocation probe confirmed that it returns HTTP `401`.
+The portal currently reports **Under Review**. This is not manual approval,
 Creator Portal acceptance, permission to publish as verified, or n8n
 endorsement. Do not claim acceptance until the portal reports **Approved For
 Publish**.
