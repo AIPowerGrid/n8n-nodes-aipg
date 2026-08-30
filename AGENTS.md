@@ -24,6 +24,10 @@ keeps Grid credentials in n8n's encrypted credential store.
 - `CREATOR_PORTAL_SUBMISSION.md` owns the current provenance and verified-node
   intake checklist. A prepared checklist is not npm publication or Creator
   Portal acceptance.
+- `CREATOR_PORTAL_DEMO.md` owns the manual-review recording procedure, and
+  `examples/creator-portal-review.json` is its credential-free workflow. Keep
+  both pinned to the exact public package under review and free of secrets,
+  account identifiers, wallet addresses, and credential IDs.
 
 ## Verification
 
