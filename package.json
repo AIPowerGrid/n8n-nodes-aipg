@@ -50,9 +50,9 @@
 	},
 	"devDependencies": {
 		"@n8n/node-cli": "0.46.0",
-		"eslint": "9.39.4",
-		"prettier": "3.8.3",
-		"typescript": "5.9.3"
+		"eslint": "10.9.1",
+		"prettier": "3.9.6",
+		"typescript": "7.0.2"
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
