@@ -58,14 +58,15 @@ resolve it. Version `0.1.3` therefore points npm directly at this dedicated
 repository, where `credentials/AipgApi.credentials.ts` is at the root.
 
 The resubmitted `0.1.3` package passed the Creator Portal's automated review.
-The required uncut demonstration was uploaded on 2026-08-30 and showed the
-exact npm package, masked credential validation, direct text generation, and an
-AI-agent tool call. The disposable scoped Grid key was revoked after the
-recording, and the fixed revocation probe confirmed that it returns HTTP `401`.
-The portal currently reports **Under Review**. This is not manual approval,
-Creator Portal acceptance, permission to publish as verified, or n8n
-endorsement. Do not claim acceptance until the portal reports **Approved For
-Publish**.
+On 2026-08-30 an uncut demonstration appeared to be submitted, and the
+disposable scoped Grid key used for that recording was revoked successfully.
+However, the authoritative portal status on 2026-08-30 EDT is **Awaiting
+Video**, not **Under Review**. No durable video submission is therefore claimed.
+A fresh recording must show the exact npm package, masked credential
+validation, direct text generation, and an AI-agent tool call before being
+uploaded again. This is not manual approval, Creator Portal acceptance,
+permission to publish as verified, or n8n endorsement. Do not claim acceptance
+until the portal reports **Approved For Publish**.
 
 The credential-free reviewer workflow is
 [`examples/creator-portal-review.json`](examples/creator-portal-review.json),
