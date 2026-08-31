@@ -21,7 +21,9 @@ an API key, an account identifier, a wallet, or a credit balance.
 
 Target duration: 3:30 to 4:30.
 
-Submission status: package `0.1.3` entered n8n manual review on 2026-08-30.
+Submission status: package `0.1.3` passed automated review, but the Creator
+Portal currently reports **Awaiting Video**. A fresh recording must be uploaded
+and accepted by the portal before manual review begins.
 
 1. Open **Settings -> Community nodes -> Install**.
 2. Install the exact public package
